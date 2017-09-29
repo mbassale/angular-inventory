@@ -1,4 +1,6 @@
 
+import {environment} from '../environments/environment';
+
 export class Product {
 
   public sku: string;
@@ -13,5 +15,9 @@ export class Product {
     this.imageUrl = imageUrl;
     this.department = department;
     this.price = price;
+  }
+
+  getImageUrl(): string {
+    return environment.baseUrl + this.imageUrl;
   }
 }
